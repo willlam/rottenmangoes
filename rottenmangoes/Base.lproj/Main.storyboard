@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Collection View Controller-->
@@ -27,18 +26,34 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Vv-92-O5K">
-                                            <rect key="frame" x="5" y="5" width="190" height="190"/>
-                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBK-IB-q6H" userLabel="Title">
+                                            <rect key="frame" x="79" y="43" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-eW-RYe" userLabel="Description">
+                                            <rect key="frame" x="79" y="130" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="4Vv-92-O5K" firstAttribute="top" secondItem="hcL-8X-BIg" secondAttribute="topMargin" constant="-3" id="GIB-X5-TFs"/>
-                                    <constraint firstItem="4Vv-92-O5K" firstAttribute="centerY" secondItem="hcL-8X-BIg" secondAttribute="centerY" id="b5q-gP-RYI"/>
-                                    <constraint firstItem="4Vv-92-O5K" firstAttribute="leading" secondItem="hcL-8X-BIg" secondAttribute="leadingMargin" constant="-3" id="bce-MV-hrG"/>
-                                    <constraint firstItem="4Vv-92-O5K" firstAttribute="centerX" secondItem="hcL-8X-BIg" secondAttribute="centerX" id="oDv-S0-UPD"/>
+                                    <constraint firstAttribute="trailing" secondItem="6bi-eW-RYe" secondAttribute="trailing" constant="79" id="N31-03-sIc"/>
+                                    <constraint firstItem="gBK-IB-q6H" firstAttribute="top" secondItem="hcL-8X-BIg" secondAttribute="top" constant="43" id="Pm0-hH-QX3"/>
+                                    <constraint firstItem="6bi-eW-RYe" firstAttribute="leading" secondItem="hcL-8X-BIg" secondAttribute="leading" constant="79" id="cko-Fy-9HP"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBK-IB-q6H" secondAttribute="trailing" constant="79" id="hir-20-pv4"/>
+                                    <constraint firstItem="gBK-IB-q6H" firstAttribute="leading" secondItem="hcL-8X-BIg" secondAttribute="leading" constant="79" id="uoL-NB-SfE"/>
+                                    <constraint firstAttribute="bottom" secondItem="6bi-eW-RYe" secondAttribute="bottom" constant="49" id="yPv-Aw-BMx"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="movieIDLabel" destination="6bi-eW-RYe" id="S8v-Mz-7Il"/>
+                                    <outlet property="titleLabel" destination="gBK-IB-q6H" id="rog-8N-c4G"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -48,6 +63,12 @@
                     </collectionView>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMD-rB-amc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <collectionViewFlowLayout minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Rv-y8-q5W">
+                    <size key="itemSize" width="200" height="200"/>
+                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </collectionViewFlowLayout>
             </objects>
             <point key="canvasLocation" x="-428" y="375"/>
         </scene>
