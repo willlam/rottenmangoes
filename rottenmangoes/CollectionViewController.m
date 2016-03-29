@@ -73,7 +73,7 @@ static NSString *ROTTEN_TOMATO_APIKEY = @"j9fhnct2tp8wu2q9h75kanh9";
 	
 	cell.titleLabel.text = movie.title;
 	cell.movieIDLabel.text = movie.movieID;
-
+	cell.moviePhoto.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:movie.photo]]];
     
     return cell;
 }

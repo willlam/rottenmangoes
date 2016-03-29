@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		395EFCBD1CAB0854006CA945 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395EFCBC1CAB0854006CA945 /* MapKit.framework */; };
 		396319231CA9BCAF00C392F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 396319221CA9BCAF00C392F3 /* main.m */; };
 		396319261CA9BCAF00C392F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 396319251CA9BCAF00C392F3 /* AppDelegate.m */; };
 		3963192C1CA9BCAF00C392F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3963192A1CA9BCAF00C392F3 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		395EFCBC1CAB0854006CA945 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3963191E1CA9BCAF00C392F3 /* rottenmangoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rottenmangoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		396319221CA9BCAF00C392F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		396319241CA9BCAF00C392F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395EFCBD1CAB0854006CA945 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		396319151CA9BCAE00C392F3 = {
 			isa = PBXGroup;
 			children = (
+				395EFCBC1CAB0854006CA945 /* MapKit.framework */,
 				396319201CA9BCAF00C392F3 /* rottenmangoes */,
 				3963191F1CA9BCAF00C392F3 /* Products */,
 			);
@@ -126,6 +130,11 @@
 					3963191D1CA9BCAF00C392F3 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 7E24WC8BA8;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -317,6 +326,7 @@
 				396319371CA9BCAF00C392F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
